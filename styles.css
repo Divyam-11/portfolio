@@ -25,10 +25,12 @@
 *{
     margin:0;
     border: 0;
+    cursor: none;
   
 }
 body{
   background-color: black;
+  
 }
 nav{
 position: fixed;
@@ -47,12 +49,18 @@ background-color:#1A221E;
 border: 1px solid #CBFFDE;
 box-shadow: 0px 0px 4.35233px #38FF7E, 0px 0px 2.17617px #38FF7E;
 
-
+z-index: 2;
 }
+
 nav a{
 font-family: "Courier Prime",monospace;
 color: #CBFFDE;
 text-shadow: 0px 0px 4.35233px rgba(56, 255, 126, 0.5), 0px 0px 2.17617px rgba(56, 255, 126, 0.5);
+
+}
+nav a:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
 .welcome{
     height: 90vh;
@@ -60,7 +68,7 @@ text-shadow: 0px 0px 4.35233px rgba(56, 255, 126, 0.5), 0px 0px 2.17617px rgba(5
     justify-content: center;
     align-items: center;
     background: rgb(18,18,18);
-    background: linear-gradient(180deg, rgba(18,18,18,1) 64%, rgba(12,121,9,1) 100%); 
+    background: linear-gradient(180deg, rgba(18,18,18,1) 64%, rgb(7, 63, 5) 100%); 
     
 }
 
@@ -92,7 +100,7 @@ font-size: 2rem;
 .second{
   min-height: 90vh;
   background: rgb(18,18,18);
-  background: linear-gradient(0deg, rgba(18,18,18,1) 64%, rgba(12,121,9,1) 100%);   
+  background: linear-gradient(0deg, rgba(18,18,18,1) 64%, rgb(7, 63, 5) 100%); 
   filter: blur(10);
   display: flex;
   flex-direction: column;
@@ -123,23 +131,9 @@ font-weight: 10;
   padding-top: 4rem;
   text-align: center;
 }
-.third{
-  display: flex ;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #121212;
-  align-items: center;
-}
-.third h1{
-  font-family: "Courier Prime",monospace;
-  color: #CBFFDE;
-text-shadow: 0px 0px 4.35233px rgba(56, 255, 126, 0.5), 0px 0px 2.17617px rgba(56, 255, 126, 0.5);
-text-align: center;
-padding-top: 12rem;
-font-weight: 10;
-font-size: 2rem;
-}
-.third .work_parent{
+
+
+.work_parent{
   background: rgb(5,11,8);
   background: linear-gradient(180deg, rgba(5,11,8,1) 0%, rgba(7,14,10,1) 100%); 
   width: 75vw;
@@ -147,6 +141,34 @@ font-size: 2rem;
   margin-top: 8rem;
   border-radius: 1rem;
   border: 0.1rem solid white;
-  border-image: linear-gradient(3deg, rgba(23,39,29,1) 57%, rgba(46,101,65,1) 85%, rgba(57,139,86,1) 100%); ; 
+  border-image: linear-gradient(0deg, rgba(23,39,29,1) 57%, rgba(46,101,65,1) 85%, rgba(57,139,86,1) 100%); ; 
   border-image-slice: 1;
+  align-self: center;
+}
+.second .socials{
+  padding-top: 4rem;
+  text-align: center;
+}
+.second .logos{
+  display: flex;
+  justify-content: center;
+}
+.second .logos p{
+  padding: 0rem 0.5rem;
+}
+.second .socials p{
+  padding: 0rem 0.5rem;
+}
+.cursor{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  filter: blur(30px);
+  background-color: #00ff4093;
+  top : 0px;
+  left : 0px;
+  position: fixed;
+  z-index: 1;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
 }
